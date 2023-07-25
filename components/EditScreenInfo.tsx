@@ -36,9 +36,9 @@ export default function EditScreenInfo({ path }: { path: string }) {
       <View style={styles.helpContainer}>
         <ExternalLink
           style={styles.helpLink}
-          href="https://instagram.com/divine.er">
+          href="https://github.com/divinejoshua">
           <Text style={styles.helpLinkText} lightColor={Colors.light.tint}>
-            Tap here if your app doesn't automatically update after making changes
+            Check out on github.com/divinejoshua
           </Text>
         </ExternalLink>
       </View>
