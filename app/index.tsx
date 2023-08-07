@@ -1,6 +1,5 @@
-import { View, Text } from '../components/Themed'
 import { useState } from "react";
-import { SafeAreaView, ScrollView, useColorScheme } from "react-native";
+import { SafeAreaView, ScrollView, useColorScheme, View, Text } from "react-native";
 import { Stack, useRouter } from "expo-router";
 
 import { COLORS, icons, images, SIZES } from "../constants";
