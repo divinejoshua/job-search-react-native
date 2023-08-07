@@ -10,6 +10,8 @@ const ScreenHeaderBtn = ({iconUrl, dimension} : { iconUrl : ImageSourcePropType,
       <Image
         source={iconUrl}
         resizeMode='cover'
+        //@ts-ignore: true
+        style={styles.btnImg(dimension)}
       />
     </TouchableOpacity>
   )
