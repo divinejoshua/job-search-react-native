@@ -22,8 +22,8 @@ export default function home() {
 
 
   return (
-    <View>
-      <Text>home</Text>
-    </View>
+   <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
+
+   </SafeAreaView>
   )
 }
