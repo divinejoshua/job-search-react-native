@@ -18,23 +18,57 @@ export default function home() {
   const router = useRouter()
 
   // Get theme 
-  const currentTheme = useColorScheme();
-  const backgroundColor = currentTheme === "light" ?  COLORS.lightWhite : COLORS.backgroundDarkMode
-  const textColor = currentTheme === "light" ? COLORS.backgroundDarkMode :COLORS.lightWhite
-  // const borderColor = currentTheme === "light" ? Colors.light.borderColor :Colors.dark.borderColor
-
   // Data 
   const [searchTerm, setSearchTerm] = useState("");
 
 
   return (
-   <SafeAreaView style={{ flex: 1, backgroundColor:backgroundColor }}>
+   <SafeAreaView style={{ flex: 1, backgroundColor:COLORS.lightWhite }}>
+
+    {/* Stack screen options  */}
       <Stack.Screen options={{
         headerStyle:{
-          backgroundColor: backgroundColor,
+          backgroundColor: COLORS.lightWhite,
         },
         headerShadowVisible: false,
+        headerLeft: () => (
+          <ScreenHeaderBtn iconUrl={icons.menu} dimension='60%' />
+        ),
+        headerRight: () => (
+          <ScreenHeaderBtn iconUrl={images.profile} dimension='100%' />
+        ),
+        headerTitle: "",
       }}/>
+
+
+      {/* Main scroll view  */}
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View
+          style={{
+            flex: 1,
+            padding: SIZES.medium,
+          }}
+        >
+
+          {/* Welcome Component  */}
+          <Welcome
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            handleClick={() => {
+              if (searchTerm) {
+                router.push(`/search/${searchTerm}`)
+              }
+            }}
+          />
+
+          {/* Popular job component  */}
+          <Popularjobs />
+
+          {/* Nearby jobs component  */}
+          <Nearbyjobs />
+          
+        </View>
+      </ScrollView>
 
    </SafeAreaView>
   )

@@ -48,10 +48,10 @@ function RootLayoutNav() {
   const colorScheme = useColorScheme();
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+    // <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
          <Stack initialRouteName="index">
             <Stack.Screen name="index" />
         </Stack>
-    </ThemeProvider>
+    // </ThemeProvider>
   );
 }
