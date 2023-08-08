@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   //@ts-ignore: true
-  btnImg: (dimension: string) => ({
+  btnImg: (dimension) => ({
     width: dimension,
     height: dimension,
     borderRadius: SIZES.small / 1.25,
