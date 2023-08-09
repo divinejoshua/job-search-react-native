@@ -4,7 +4,7 @@ import styles from './nearbyjobcard.style'
 
 const NearbyJobCard = ({ job, handleNavigate }: { job : object, handleNavigate : Function}) => {
   return (
-      <TouchableOpacity style={styles.container} onPress={()=>handleNavigate}>
+      <TouchableOpacity style={styles.container} onPress={()=>handleNavigate()}>
         <TouchableOpacity style={styles.logoContainer}>
           <Image
             source={{
