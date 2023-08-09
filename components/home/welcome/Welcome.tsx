@@ -15,12 +15,10 @@ import { icons, SIZES } from "../../../constants";
 // Job types constants 
 const jobTypes = ["Full-time", "Part-time", "Contractor"];
 
-
+//Main export default 
 export default function Welcome({searchTerm, setSearchTerm, handleClick} : {searchTerm : string, setSearchTerm : Function, handleClick: Function}) {
 
-
   const router = useRouter();
-
 
   // Data 
   const [activeJobType, setActiveJobType] = useState("Full-time");
@@ -75,7 +73,7 @@ export default function Welcome({searchTerm, setSearchTerm, handleClick} : {sear
               <Text style={styles.tabText(activeJobType, item)}>{item}</Text>
             </TouchableOpacity>
           )}
-          keyExtractor={(item) => item}
+          // keyExtractor={(item) => item}
           contentContainerStyle={{ columnGap: SIZES.small }}
           horizontal
         />
