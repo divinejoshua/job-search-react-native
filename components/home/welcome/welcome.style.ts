@@ -10,7 +10,6 @@ const styles = StyleSheet.create({
     fontFamily: FONT.regular,
     fontSize: SIZES.large,
     color: COLORS.secondary,
-    marginBottom:10,
   },
   welcomeMessage: {
     fontFamily: FONT.bold,
