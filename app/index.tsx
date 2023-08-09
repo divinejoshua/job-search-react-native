@@ -46,10 +46,10 @@ export default function home() {
         },
         headerShadowVisible: false,
         headerLeft: () => (
-          <ScreenHeaderBtn iconUrl={icons.menu} dimension='60%' />
+          <ScreenHeaderBtn iconUrl={icons.menu} dimension='60%' handlePress={()=> null} />
         ),
         headerRight: () => (
-          <ScreenHeaderBtn iconUrl={images.profile} dimension='100%' />
+          <ScreenHeaderBtn iconUrl={images.profile} dimension='100%' handlePress={()=> null} />
         ),
         headerTitle: "",
       }}/>
