@@ -87,6 +87,7 @@ export default function JobDetails() {
                 headerShadowVisible: false,
                 headerBackVisible: false,
                 headerLeft: () => (
+                // Back button 
                 <ScreenHeaderBtn
                     iconUrl={icons.left}
                     dimension='60%'
@@ -94,6 +95,7 @@ export default function JobDetails() {
                 />
                 ),
                 headerRight: () => (
+                // Share button 
                 <ScreenHeaderBtn iconUrl={icons.share} dimension='60%' />
                 ),
                 headerTitle: "",

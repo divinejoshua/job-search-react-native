@@ -12,7 +12,7 @@ function TabButton({ name, activeTab, onHandleSearchType } : { name : string, ac
     <TouchableOpacity
     // @ts-ignore: true
       style={styles.btn(name, activeTab)}
-      onPress={()=>onHandleSearchType}
+      onPress={()=>onHandleSearchType()}
     >
       {/* @ts-ignore: true */}
       <Text style={styles.btnText(name, activeTab)}>{name}</Text>
@@ -35,7 +35,7 @@ const Tabs = ({ tabs, activeTab, setActiveTab } : { tabs : string[], activeTab :
             <TabButton
               name={item}
               activeTab={activeTab}
-              onHandleSearchType={() => setActiveTab("item")}
+              onHandleSearchType={() => setActiveTab(item)}
             />
           )}
           contentContainerStyle={{ columnGap: SIZES.small / 2 }}
