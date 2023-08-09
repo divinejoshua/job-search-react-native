@@ -126,7 +126,11 @@ const JobSearch = () => {
 
                 // List footer document 
                 ListFooterComponent={() => (
+
+                    //Pagination 
                     <View style={styles.footerContainer}>
+
+                        {/* Move left  */}
                         <TouchableOpacity
                             style={styles.paginationButton}
                             onPress={() => handlePagination('left')}
@@ -137,9 +141,13 @@ const JobSearch = () => {
                                 resizeMode="contain"
                             />
                         </TouchableOpacity>
+
+                        {/* Page Number  */}
                         <View style={styles.paginationTextBox}>
                             <Text style={styles.paginationText}>{page}</Text>
                         </View>
+
+                        {/* Move right  */}
                         <TouchableOpacity
                             style={styles.paginationButton}
                             onPress={() => handlePagination('right')}
