@@ -1,10 +1,27 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, Image, Linking } from 'react-native'
+import { View, Text, TouchableOpacity, Image, Linking, Platform, StatusBar } from 'react-native'
 
 import styles from './footer.style'
 import { icons } from "../../../constants";
+import { ExternalLink } from '@/components/ExternalLink';
+import * as WebBrowser from 'expo-web-browser';
+
 
 const Footer = ({ url } : {url : string}) => {
+
+  // Open external Link 
+  const openExternalLink = (url: string, e:any) =>{
+    if (Platform.OS !== 'web') {
+      // Prevent the default behavior of linking to the default browser on native.
+      e.preventDefault();
+      // Open the link in an in-app browser.
+      WebBrowser.openBrowserAsync(url);
+    }
+    <>
+   {/* Status bar  */}
+   <StatusBar barStyle = "dark-content" hidden = {false} translucent = {true}/>
+  </>
+  }
   return (
     <View style={styles.container}>
 
@@ -20,7 +37,7 @@ const Footer = ({ url } : {url : string}) => {
       {/* Apply button  */}
       <TouchableOpacity
         style={styles.applyBtn}
-        onPress={() => Linking.openURL(url)}
+        onPress={(e) => openExternalLink(url, e)}
       >
         <Text style={styles.applyBtnText}>Apply for job</Text>
       </TouchableOpacity>
