@@ -28,7 +28,7 @@ export default function Welcome({searchTerm, setSearchTerm, handleClick} : {sear
     <View>
       {/* Header text  */}
       <View style={styles.container}>
-        <Text style={styles.userName}>Hello Bella</Text>
+        <Text style={styles.userName}>Hello Qing madi</Text>
         <Text style={styles.welcomeMessage}>Find the right Job</Text>
       </View>
 
