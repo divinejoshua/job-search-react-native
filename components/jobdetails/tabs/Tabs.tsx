@@ -5,7 +5,7 @@ import styles from "./tabs.style";
 import { SIZES } from "../../../constants";
 
 
-const Tabs = () => {
+const Tabs = ({ name, activeTab, onHandleSearchType } : { name : string, activeTab : string, onHandleSearchType : Function}) => {
   return (
     <View>
       <Text>Tabs </Text>
