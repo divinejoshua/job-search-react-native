@@ -8,6 +8,8 @@ import {
   ActivityIndicator,
   RefreshControl,
   StatusBar,
+  Share,
+  Alert
 } from "react-native";
 
 import {
@@ -76,6 +78,28 @@ export default function JobDetails() {
         }
     }
 
+    // On share 
+    const onShare = async () => {
+      try {
+        const result = await Share.share({
+          // This is the message that will be shared. This could be link 
+          message:
+            'Happy to share something with you.',
+        });
+        if (result.action === Share.sharedAction) {
+          if (result.activityType) {
+            // shared with activity type of result.activityType
+          } else {
+            // shared
+          }
+        } else if (result.action === Share.dismissedAction) {
+          // dismissed
+        }
+      } catch (error: any) {
+        Alert.alert(error.message);
+      }
+
+    }
 
   return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
@@ -96,7 +120,7 @@ export default function JobDetails() {
                 ),
                 headerRight: () => (
                 // Share button 
-                <ScreenHeaderBtn iconUrl={icons.share} dimension='60%' />
+                <ScreenHeaderBtn iconUrl={icons.share} dimension='60%' handlePress={() => onShare()} />
                 ),
                 headerTitle: "",
             }}
