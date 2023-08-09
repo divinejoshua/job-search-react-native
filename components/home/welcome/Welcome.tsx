@@ -46,7 +46,7 @@ export default function Welcome({searchTerm, setSearchTerm, handleClick} : {sear
           </View>
 
           {/* Search button  */}
-          <TouchableOpacity style={styles.searchBtn} onPress={()=>handleClick}>
+          <TouchableOpacity style={styles.searchBtn} onPress={()=>handleClick()}>
             <Image
               source={icons.search}
               resizeMode='contain'
