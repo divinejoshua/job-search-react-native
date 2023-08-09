@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SafeAreaView, ScrollView, useColorScheme, View, Text } from "react-native";
+import { SafeAreaView, ScrollView, useColorScheme, View, Text, StatusBar } from "react-native";
 import { Stack, useRouter } from "expo-router";
 
 import { COLORS, icons, images, SIZES } from "../constants";
@@ -53,6 +53,9 @@ export default function home() {
         ),
         headerTitle: "",
       }}/>
+
+      {/* StatusBar  */}
+      <StatusBar barStyle = "dark-content" hidden = {false} translucent = {true}/>
 
 
       {/* Main scroll view  */}

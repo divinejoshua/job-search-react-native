@@ -7,6 +7,7 @@ import {
   ScrollView,
   ActivityIndicator,
   RefreshControl,
+  StatusBar,
 } from "react-native";
 
 import {
@@ -21,7 +22,7 @@ import { COLORS, icons, SIZES } from "../../constants";
 import useFetch from "../../hooks/useFetch";
 
 // Constant variables 
-const tabs = ["About", "Qualifications", "Responsibilities"];
+const tabs : string[]= ["About", "Qualifications", "Responsibilities"];
 
 
 export default function JobDetails() {
@@ -98,7 +99,8 @@ export default function JobDetails() {
                 headerTitle: "",
             }}
             />
-
+            {/* Status bar  */}
+             <StatusBar barStyle = "dark-content" hidden = {false} translucent = {true}/>
             <>
                 {/* Scroll view  */}
                 <ScrollView showsVerticalScrollIndicator={false}
@@ -114,15 +116,13 @@ export default function JobDetails() {
                 ) : (
                     <View style={{ padding: SIZES.medium, paddingBottom: 100 }}>
 
-                    {/* Company info  */}
+                    {/* Company info component  */}
                     <Company
-                        companyLogo={data[0].employer_logo}
-                        jobTitle={data[0].job_title}
-                        companyName={data[0].employer_name}
-                        location={data[0].job_country}
+                        // @ts-ignore: true
+                        companyLogo={data[0].employer_logo}jobTitle={data[0].job_title} companyName={data[0].employer_name} location={data[0].job_country}
                     />
 
-                    {/* Job tabs   */}
+                    {/* Job tabs component   */}
                     <JobTabs
                         tabs={tabs}
                         activeTab={activeTab}
