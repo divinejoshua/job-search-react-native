@@ -28,7 +28,7 @@ export default function Welcome({searchTerm, setSearchTerm, handleClick} : {sear
     <View>
       {/* Header text  */}
       <View style={styles.container}>
-        <Text style={styles.userName}>Hello Qing madi</Text>
+        <Text style={styles.userName}>Hello Qing Madi</Text>
         <Text style={styles.welcomeMessage}>Find the right Job</Text>
       </View>
 
@@ -40,7 +40,8 @@ export default function Welcome({searchTerm, setSearchTerm, handleClick} : {sear
               style={styles.searchInput}
               value={searchTerm}
               onChangeText={(text) => setSearchTerm(text)}
-              placeholder='What are you looking for?'
+              placeholder={'What are you looking for?'}
+              placeholderTextColor={'#afafaf'}
             />
           </View>
 

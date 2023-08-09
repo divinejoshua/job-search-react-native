@@ -9,6 +9,7 @@ import {
   ScreenHeaderBtn,
   Welcome,
 } from "../components";
+import { RefreshControl } from "react-native-gesture-handler";
 
 
 
@@ -19,6 +20,20 @@ export default function home() {
   // Get theme 
   // Data 
   const [searchTerm, setSearchTerm] = useState("");
+  const [isRefreshing, setisRefreshing] = useState(false) 
+
+
+  // Loading functionality 
+  const LoadData = () => {
+    // Set loading to true 
+    setisRefreshing(true)
+
+    // Set Loading back to false after a few seconds 
+    setTimeout(() => {
+      setisRefreshing(false);
+    }, 2000);
+  }
+
 
 
   return (
@@ -41,7 +56,15 @@ export default function home() {
 
 
       {/* Main scroll view  */}
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView showsVerticalScrollIndicator={false}
+          refreshControl={
+            <RefreshControl
+              refreshing={isRefreshing}
+              // tintColor={"transparent"}
+              onRefresh={LoadData}
+            />
+          }
+      >
         <View
           style={{
             flex: 1,
