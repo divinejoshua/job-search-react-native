@@ -89,6 +89,7 @@ const JobSearch = () => {
                 }}
             />
 
+            {/* Loop through the results  */}
             <FlatList
                 data={searchResult}
                 renderItem={({ item }) => (
@@ -101,12 +102,17 @@ const JobSearch = () => {
                 //@ts-ignore:true
                 keyExtractor={(item) => item.job_id}
                 contentContainerStyle={{ padding: SIZES.medium, rowGap: SIZES.medium }}
+
+                // List header component 
                 ListHeaderComponent={() => (
                     <>
                         <View style={styles.container}>
+                            {/* Search title  */}
                             <Text style={styles.searchTitle}>{params.id}</Text>
                             <Text style={styles.noOfSearchedJobs}>Job Opportunities</Text>
                         </View>
+
+                        {/* Loader or Error  */}
                         <View style={styles.loaderContainer}>
                             {searchLoader ? (
                                 <ActivityIndicator size='large' color={COLORS.primary} />
@@ -114,8 +120,11 @@ const JobSearch = () => {
                                 <Text>Oops something went wrong</Text>
                             )}
                         </View>
+
                     </>
                 )}
+
+                // List footer document 
                 ListFooterComponent={() => (
                     <View style={styles.footerContainer}>
                         <TouchableOpacity
