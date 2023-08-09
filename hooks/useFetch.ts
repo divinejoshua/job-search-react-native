@@ -28,9 +28,17 @@ const useFetch = (endpoint : string, query : object) => {
     setIsLoading(true);
 
     try {
-      const response = await axios.request(options);
-      setData(response.data.data);
+
+      // Orginal API 
+      // const response = await axios.request(options);
+      // setData(response.data.data);
+      
+
+      //Mock Data 
+      const response = require("../data/search.json")
+      setData(response.data);
       setIsLoading(false);
+
     } catch (error : any) {
       setError("Something went wrong when fetching data");
     //   console.log(error)

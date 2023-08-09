@@ -3,6 +3,7 @@ import { StyleSheet } from "react-native";
 import { COLORS, FONT, SHADOWS, SIZES } from "../../../../constants";
 
 const styles = StyleSheet.create({
+   //@ts-ignore: true
   container: (selectedJob, item) => ({
     width: 250,
     padding: SIZES.xLarge,
@@ -12,6 +13,7 @@ const styles = StyleSheet.create({
     ...SHADOWS.medium,
     shadowColor: COLORS.white,
   }),
+   //@ts-ignore: true
   logoContainer: (selectedJob, item) => ({
     width: 50,
     height: 50,
@@ -33,6 +35,7 @@ const styles = StyleSheet.create({
   infoContainer: {
     marginTop: SIZES.large,
   },
+  //@ts-ignore: true
   jobName: (selectedJob, item) => ({
     fontSize: SIZES.large,
     fontFamily: FONT.medium,
@@ -44,9 +47,11 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     alignItems: "center",
   },
-  publisher: (selectedJob) => ({
+   //@ts-ignore: true
+  publisher: (selectedJob, item) => ({
     fontSize: SIZES.medium - 2,
     fontFamily: FONT.bold,
+     //@ts-ignore: true
     color: selectedJob === item.job_id ? COLORS.white : COLORS.primary,
   }),
   location: {
