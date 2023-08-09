@@ -28,13 +28,13 @@ const useFetch = (endpoint : string, query : object) => {
     setIsLoading(true);
 
     // Declear jsonData location 
-    let jsonDataLocation : string = ""
+    let jsonDataLocation
 
     // Check the value of endpoint to determine the data location
     if(endpoint === "search"){
-      jsonDataLocation = "../data/search.json"
+      jsonDataLocation = require("../data/search.json")
     } else if(endpoint === "job-details"){
-      jsonDataLocation = "../data/job-details.json"
+      jsonDataLocation = require("../data/job-details.json")
     }
 
     try {
@@ -45,7 +45,7 @@ const useFetch = (endpoint : string, query : object) => {
       
 
       //Mock Data 
-      const response = require(jsonDataLocation)
+      const response = jsonDataLocation
       setData(response.data);
       setIsLoading(false);
 
