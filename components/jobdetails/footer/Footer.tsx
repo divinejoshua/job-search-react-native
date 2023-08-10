@@ -20,7 +20,7 @@ const Footer = ({ url } : {url : string}) => {
     }
     <>
    {/* Status bar  */}
-   <StatusBar style="auto" />
+   <StatusBar style="auto"/>
   </>
   }
   return (
