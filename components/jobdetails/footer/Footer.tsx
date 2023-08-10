@@ -1,5 +1,6 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, Image, Linking, Platform, StatusBar } from 'react-native'
+import { View, Text, TouchableOpacity, Image, Linking, Platform, } from 'react-native'
+import { StatusBar } from 'expo-status-bar';
 
 import styles from './footer.style'
 import { icons } from "../../../constants";
@@ -19,7 +20,7 @@ const Footer = ({ url } : {url : string}) => {
     }
     <>
    {/* Status bar  */}
-   <StatusBar barStyle = "dark-content" hidden = {false} translucent = {true}/>
+   <StatusBar style="auto" />
   </>
   }
   return (

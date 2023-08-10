@@ -129,7 +129,7 @@ export default function JobDetails() {
             }}
             />
             {/* Status bar  */}
-             <StatusBar barStyle = "dark-content" hidden = {false} translucent = {true}/>
+             {/* <StatusBar barStyle = "dark-content" hidden = {false} translucent = {true}/> */}
             <>
                 {/* Scroll view  */}
                 <ScrollView showsVerticalScrollIndicator={false}
