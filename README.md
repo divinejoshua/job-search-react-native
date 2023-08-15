@@ -14,10 +14,6 @@ npx expo start
 
 
 ## Screenshots
-<img src="assets/images/IMG_8121.PNG" alt="Screenshot" width="200">
-<img src="assets/images/IMG_8122.PNG" alt="Screenshot" width="200">
-<img src="assets/images/IMG_8123.PNG" alt="Screenshot" width="200">
-<img src="assets/images/IMG_8124.PNG" alt="Screenshot" width="200">
-<img src="assets/images/IMG_8125.PNG" alt="Screenshot" width="200">
-<img src="assets/images/IMG_8126.PNG" alt="Screenshot" width="200">
-<img src="assets/images/IMG_8127.PNG" alt="Screenshot" width="200">
+<img src="assets/images/IMG_8129.PNG" alt="Screenshot" width="200">
+<img src="assets/images/IMG_8130.PNG" alt="Screenshot" width="200">
+<img src="assets/images/IMG_8131.PNG" alt="Screenshot" width="200">
