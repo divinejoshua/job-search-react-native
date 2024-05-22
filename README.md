@@ -12,6 +12,12 @@ npm install
 npx expo start
 ```
 
+### Publish to expo app store
+```
+eas update
+```
+
+
 
 ## Screenshots
 <img src="assets/images/IMG_8129.PNG" alt="Screenshot" width="200">
