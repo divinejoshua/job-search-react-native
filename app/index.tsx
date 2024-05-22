@@ -9,7 +9,7 @@ import {
   ScreenHeaderBtn,
   Welcome,
 } from "../components";
-import { RefreshControl } from "react-native-gesture-handler";
+import { GestureHandlerRootView, RefreshControl } from "react-native-gesture-handler";
 
 
 
@@ -61,11 +61,13 @@ export default function home() {
       {/* Main scroll view  */}
       <ScrollView showsVerticalScrollIndicator={false}
           refreshControl={
-            <RefreshControl
-              refreshing={isRefreshing}
-              // tintColor={"transparent"}
-              onRefresh={LoadData}
-            />
+            <GestureHandlerRootView style={{ flex: 1 }}>
+              <RefreshControl
+                refreshing={isRefreshing}
+                // tintColor={"transparent"}
+                onRefresh={LoadData}
+              />
+            </GestureHandlerRootView>
           }
       >
         <View
